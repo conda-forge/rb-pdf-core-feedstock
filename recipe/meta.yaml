@@ -1,5 +1,5 @@
 {% set name = "pdf-core" %}
-{% set version = "0.10.0" %}
+{% set version = "0.9.0" %}
 
 package:
   name: rb-{{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://rubygems.org/downloads/{{ name }}-{{ version }}.gem
-    sha256: 0a5d101e2063c01e3f941e1ee47cbb97f1adfc1395b58372f4f65f1300f3ce91
+    sha256: 4f368b2f12b57ec979872d4bf4bd1a67e8648e0c81ab89801431d2fc89f4e0bb
 
 build:
   noarch: generic
@@ -43,3 +43,4 @@ about:
 extra:
   recipe-maintainers:
     - jdmarques
+    - rudispr
