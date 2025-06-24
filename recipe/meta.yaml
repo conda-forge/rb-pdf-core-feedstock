@@ -1,6 +1,7 @@
 {% set name = "pdf-core" %}
 {% set version = "0.9.0" %}
 {% set hash = "4f368b2f12b57ec979872d4bf4bd1a67e8648e0c81ab89801431d2fc89f4e0bb" %}
+{% set build = 2 %}
 
 package:
   name: rb-{{ name|lower }}
@@ -12,7 +13,7 @@ source:
 
 build:
   noarch: generic
-  number: 1
+  number: {{ build }}
   script:
     - gem install -N -l -V --norc --ignore-dependencies -n $PREFIX/bin {{ name }}-{{ version }}.gem
     - gem unpack {{ name }}-{{ version }}.gem
