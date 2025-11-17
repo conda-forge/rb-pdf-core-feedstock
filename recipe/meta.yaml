@@ -1,7 +1,5 @@
 {% set name = "pdf-core" %}
-{% set version = "0.9.0" %}
-{% set hash = "4f368b2f12b57ec979872d4bf4bd1a67e8648e0c81ab89801431d2fc89f4e0bb" %}
-{% set build = 2 %}
+{% set version = "0.10.0" %}
 
 package:
   name: rb-{{ name|lower }}
@@ -9,11 +7,11 @@ package:
 
 source:
   - url: https://rubygems.org/downloads/{{ name }}-{{ version }}.gem
-    sha256: {{ hash }}
+    sha256: 0a5d101e2063c01e3f941e1ee47cbb97f1adfc1395b58372f4f65f1300f3ce91
 
 build:
   noarch: generic
-  number: {{ build }}
+  number: 0
   script:
     - gem install -N -l -V --norc --ignore-dependencies -n $PREFIX/bin {{ name }}-{{ version }}.gem
     - gem unpack {{ name }}-{{ version }}.gem
@@ -32,7 +30,7 @@ about:
   home: https://prawnpdf.org/
   license: GPL-2.0-or-later
   license_family: GPL
-  license_file: 
+  license_file:
     - LICENSE
     - GPLv2
     - GPLv3
